@@ -46,8 +46,37 @@
                                 <button class="button btn-sm" id="gerarChaveamento" style="font-variant-caps: normal; width: 100%; float: right">Gerar Chaveamento</button><br>
                             </td>
                             <td id="divAtualizaçao" class="col-sm-2" style="vertical-align: top;">
-                                <button class="button btn-sm" id="publicarAtualizacao" style="font-variant-caps: normal; width: 100%; float: right">Publicar atualização</button>
+                                <button class="button btn-sm" id="publicarAtualizacao" data-toggle="modal" data-target="#adicionarpublicacao" style="font-variant-caps: normal; width: 100%; float: right">Publicar atualização</button>
                             </td>
+
+                        <div class="modal fade" id="adicionarpublicacao" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title" id="exampleModalLabel" style="font-size: 18pt">Nova publicação</h4>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="form-group">
+                                                <label for="recipient-name" class="col-form-label">Título:</label>
+                                                <input type="text" class="form-control" id="recipient-name">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="message-text" class="col-form-label">Mensagem:</label>
+                                                <textarea class="form-control" id="message-text"></textarea>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-cancel" data-dismiss="modal">Fechar</button>
+                                        <button type="button" class="btn btn-primary">Enviar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         </tr>
                     </table> 
 
