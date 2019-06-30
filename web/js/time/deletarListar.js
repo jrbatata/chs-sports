@@ -211,10 +211,10 @@ var passaValor = function (valor, url)
 
 function naoTem() {
     var center = document.createElement("center");
-    center.setAttribute("style", "position: relative; top: 50%; margin: 10%;");
+    center.setAttribute("style", "position: relative; top: 15%; margin: 10%;");
 
     var img = document.createElement("img");
-    img.setAttribute("src", "../imagens/no-championship.png");
+    img.setAttribute("src", "../imagens/no-team.png");
     img.setAttribute("width", "150px");
     img.setAttribute("style", "margin-bottom:0px");
 

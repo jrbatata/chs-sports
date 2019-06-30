@@ -36,7 +36,7 @@
                                  width="150" style="float: left; margin-bottom: 16px" id = "perf">
                         </td>
                         <td class="col-sm-8" style="vertical-align: top">
-                            <h5>Segue <b>0</b> campeonatos</h5>
+                            <h5 id="segue">Segue <b>0</b> campeonatos</h5>
                             <h5 id="nome"><b>Nome Completo:</b> Nome + Sobrenome</h5>
                             <h5 id ="email"><b>Email:</b> Email</h5>
                             <h5><b>Sobre mim:</b> Amante de sports</h5>

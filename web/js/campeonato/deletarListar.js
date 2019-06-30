@@ -131,7 +131,7 @@ function adicionaCampeonatosATela(informacao, id) {
         a.setAttribute("style", "font-size: 18px; color: #333333");
         a.setAttribute("onclick", "passaValor('" + idCampeonato + "','jsp/campeonato.jsp')");
         a.setAttribute("id", "nomeCampeonato");
-        a.innerHTML = informacao.nome; //colocar em bold
+        a.innerHTML = "<b>"+informacao.nome+"</b>";
 
         //coloca o a dentro do td1
         td1.appendChild(a);
@@ -218,7 +218,7 @@ var passaValor = function (valor, url)
 
 function naoTem() {
     var center = document.createElement("center");
-    center.setAttribute("style", "position: relative; top: 50%; margin: 10%;");
+    center.setAttribute("style", "position: relative; top: 15%; margin: 10%;");
 
     var img = document.createElement("img");
     img.setAttribute("src", "../imagens/no-championship.png");

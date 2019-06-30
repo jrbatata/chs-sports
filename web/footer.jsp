@@ -59,7 +59,7 @@
             <!-- Grid row -->
         </div>
         <div class="footer-copyright text-center py-3" style="color: gray;margin-bottom: 20px">
-            Developed by Júnior, Paulo, Pepes and Fábio Copyright © 2019
+            Developed by Pepes, Júnior, Paulo and Fábio Copyright © 2019
         </div>
 
     </div>

@@ -26,35 +26,19 @@
     <body class="body-home">
         <jsp:include page="../header.jsp"/>
 
-        <div class="container col-sm-8" style="background-color: white; margin-bottom: 3%; padding-bottom: 5%; margin-left: 7%; height: 100%" >
+        <div id ="feed" class="container col-sm-8" style="background-color: white; margin-bottom: 3%; padding-bottom: 5%; margin-left: 7%; height: 100%" >
             <h3><b>Feed de Atualizações</b></h3>
             <h5 class="help-block" style="margin-bottom: 1%">Nesta seção, você tem acesso a todas as notificações dos campeonatos que você segue.</h5>
-            <!-- Se tiver post
-            <table width="100%" style="border-bottom: 1px solid lightgrey;">
-                <tr>
-                    <td width="8%">
-                <center>
-                    <img src="../imagens/championship-icon.png" class="avatar img-circle " alt="avatar" width="80%" style="margin-bottom: 16px; vertical-align: bottom">
-                </center>
-                </td>
-                <td>
-                    <h4><b>Nome do Campeonato</b></h4>
-                    <p width="78%" style="overflow: hidden; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; vertical-align: bottom">
-                        Breaking India: Western Interventions in Dravidian and Dalit Faultlines is a book written by Rajiv Malhotra and Aravindan Neelakandan which argues that India's integrity is being undermined.</p>
-                </td>
-                <td width="14%">
-                    <p style="text-align: end">há 0 minutos atrás</p><br>
-                    <button class="btn-sm" onclick="location.href = '../jsp/campeonato.jsp'" style="float: right">Ver mais</button>
-                </td>
-                </tr>
-            </table> -->
+                  
             
+            <!-- Nao tem campeonato
             <center id="no-championship" style="position: relative; top: 50%; margin: 8%;">
                 <img src="../imagens/no-championship.png" width="150px" style="margin-bottom:0px"/>
                 <h1 style="font-size: 24px">Você não está seguindo nenhum campeonato</h1>
             </center>
+            -->
 
-            <p style="color: white">AAAAAAAAAAAAAAAAAAAAAaaaa</p>
+            
         </div>
         
         <div id="recomendados" class="container col-sm-2" style="background-color: white; margin-bottom: 3%; margin-left: 2%; padding-bottom: 1%; height: 100%" >

@@ -20,7 +20,7 @@
         <link href="../css/style.css" rel="stylesheet">
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
         <script src="../js/jquery.js"></script>
-        <script src="../js/time/deletarListar.js"></script>
+        
     </head>
 
     <jsp:include page="../header.jsp"></jsp:include>
@@ -57,6 +57,7 @@
                     </div>
                 </div>
             </div>
+            <script src="../js/time/deletarListar.js"></script>
         </body>
     <jsp:include page="../footer.jsp"></jsp:include>
 </html>

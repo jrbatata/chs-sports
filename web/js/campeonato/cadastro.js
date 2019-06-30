@@ -31,8 +31,6 @@ window.onload = function () {
     }
 };
 
-
-
 function prosseguir() {
     var nome = document.getElementById("nome").value;
     var descricao = document.getElementById("descricao").value;
@@ -42,7 +40,7 @@ function prosseguir() {
     var dataFim = document.getElementById("dataFim").value;
 
     if (!isEmpty(nome) && !isEmpty(descricao) && !isEmpty(modalidade) && !isEmpty(classificacao) && !isEmpty(dataInicio) && !isEmpty(dataFim)) {
-        adicionar(nome, descricao, modalidade, classificacao, dataInicio, dataFim, temChaveamento);
+        adicionar(nome, descricao, modalidade, classificacao, dataInicio, dataFim);
     } else {
         alert("Erro: Preencha todos os campos obrigatórios (*)");
     }

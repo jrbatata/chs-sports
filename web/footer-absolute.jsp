@@ -23,5 +23,5 @@
                 </td>
             </tr>
         </table>
-        <p style="text-align: center; color: gray">Developed by Júnior, Paulo, Pepes and Fábio Copyright © 2019</p>
+        <p style="text-align: center; color: gray">Developed by Pepes, Júnior, Paulo and Fábio Copyright © 2019</p>
     </footer>

@@ -35,60 +35,68 @@
                             <td class="col-sm-2">
                                 <img src="../imagens/championship-icon.png" class="avatar img-circle" alt="avatar" width="100%" style="margin-bottom: 16px" id="imagemCampeonato">                           
                             </td>
-                            <td class="col-sm-8" style="vertical-align: top">
-                                <h5><b>0</b> visualizações <b>0</b> seguidores</h5>
+                            <td class="col-sm-3" style="vertical-align: top">
+                                <h5 id = "seguidores"><b>0</b> visualizações <b>0</b> seguidores</h5>
                                 <h5 id = "descricao">Descrição do campeonato</h5>
                             </td>
-                            <td class="col-sm-2" style="vertical-align: top">
-                                <button class="button btn-sm" id="seguirCampeonato" style="float: right">Seguir</button>
+                            <td id="divSeguir" class="col-sm-3" style="vertical-align: top;">
+                                <button class="button btn-sm" id="seguirCampeonato" style="font-variant-caps: normal; width: 100%; margin-right: 1%; float: right" onclick="seguir()">Seguir</button>
+                            </td>
+                            <td id="divChaveamento" class="col-sm-2" style="vertical-align: top;">
+                                <button class="button btn-sm" id="gerarChaveamento" style="font-variant-caps: normal; width: 100%; float: right">Gerar Chaveamento</button><br>
+                            </td>
+                            <td id="divAtualizaçao" class="col-sm-2" style="vertical-align: top;">
+                                <button class="button btn-sm" id="publicarAtualizacao" style="font-variant-caps: normal; width: 100%; float: right">Publicar atualização</button>
                             </td>
                         </tr>
                     </table> 
 
-                    <div class="col-sm-6" style="float: left">
-                        <table class="table table-bordered">
-                            <thead>
-                            <td colspan="3" style="background-color: #F3F3F3; font-size: 16px; color: #3E8538; vertical-align: middle"><b>Jogo Anterior</b></td>
-                            <td colspan="2" style="background-color: #F3F3F3; font-size: 16px; color: #3E8538; border-left: hidden"><button class="button btn-sm" onclick="location.href = 'chaveamento.jsp'" style="float: right; width: 100%;">Chaveamento completo</button></td>
-                            <tr style="color: #898989">
-                                <th scope="col" width="35%" style="text-align: center">TIME A</th>
-                                <th scope="col" width="10%" style="text-align: center">GOLS</th>
-                                <th scope="col" width="10%" style="text-align: center">x</th>
-                                <th scope="col" width="10%" style="text-align: center">GOLS</th>
-                                <th scope="col" width="35%" style="text-align: center">TIME B</th>
-                            </tr>
-                            </thead>
-                            <tr>
-                                <td style="text-align: center; vertical-align: middle">Time A</td>
-                                <td style="text-align: center; vertical-align: middle">0</td>
-                                <td style="text-align: center; vertical-align: middle">x</td>
-                                <td style="text-align: center; vertical-align: middle">0</td>
-                                <td style="text-align: center; vertical-align: middle">Time B</td>
-                            </tr>
-                        </table>
-                    </div>
+                    <div id="partidas">
+                        <div class="col-sm-6" style="float: left">
+                            <table class="table table-bordered">
+                                <thead>
+                                <td colspan="3" style="background-color: #F3F3F3; font-size: 16px; color: #3E8538; vertical-align: middle"><b>Jogo Anterior</b></td>
+                                <td colspan="2" style="background-color: #F3F3F3; font-size: 16px; color: #3E8538; border-left: hidden"><button class="button btn-sm" onclick="location.href = 'chaveamento.jsp'" style="float: right; width: 100%;">Chaveamento completo</button></td>
+                                <tr style="color: #898989">
+                                    <th scope="col" width="35%" style="text-align: center">TIME A</th>
+                                    <th scope="col" width="10%" style="text-align: center">GOLS</th>
+                                    <th scope="col" width="10%" style="text-align: center">x</th>
+                                    <th scope="col" width="10%" style="text-align: center">GOLS</th>
+                                    <th scope="col" width="35%" style="text-align: center">TIME B</th>
+                                </tr>
+                                </thead>
+                                <tr>
+                                    <td style="text-align: center; vertical-align: middle">Time A</td>
+                                    <td style="text-align: center; vertical-align: middle">0</td>
+                                    <td style="text-align: center; vertical-align: middle">x</td>
+                                    <td style="text-align: center; vertical-align: middle">0</td>
+                                    <td style="text-align: center; vertical-align: middle">Time B</td>
+                                </tr>
+                            </table>
+                        </div>
 
-                    <div class="col-sm-6" style="float: right">
-                        <table class="table table-bordered">
-                            <thead>
-                            <td colspan="4" style="background-color: #F3F3F3; font-size: 16px; color: #3E8538; vertical-align: middle"><b>Próximo Jogo</b></td>
-                            <td colspan="1" style="background-color: #F3F3F3; font-size: 16px; color: #3E8538; border-left: hidden"><button class="button btn-sm" onclick="location.href = 'aposta.jsp'" style="float: right">Apostar</button></td>
-                            <tr style="color: #898989">
-                                <th scope="col" width="35%" style="text-align: center">TIME A</th>
-                                <th scope="col" width="10%" style="text-align: center">GOLS</th>
-                                <th scope="col" width="10%" style="text-align: center">x</th>
-                                <th scope="col" width="10%" style="text-align: center">GOLS</th>
-                                <th scope="col" width="35%" style="text-align: center">TIME B</th>
-                            </tr>
-                            </thead>
-                            <tr>
-                                <td style="text-align: center; vertical-align: middle">Time A</td>
-                                <td style="text-align: center; vertical-align: middle">0</td>
-                                <td style="text-align: center; vertical-align: middle">x</td>
-                                <td style="text-align: center; vertical-align: middle">0</td>
-                                <td style="text-align: center; vertical-align: middle">Time B</td>
-                            </tr>
-                        </table>
+                        <div class="col-sm-6" style="float: right">
+                            <table class="table table-bordered">
+                                <thead>
+                                <td colspan="4" style="background-color: #F3F3F3; font-size: 16px; color: #3E8538; vertical-align: middle"><b>Próximo Jogo</b></td>
+                                <td colspan="1" style="background-color: #F3F3F3; font-size: 16px; color: #3E8538; border-left: hidden"><button class="button btn-sm" onclick="location.href = 'aposta.jsp'" style="float: right">Apostar</button></td>
+                                <tr style="color: #898989">
+                                    <th scope="col" width="35%" style="text-align: center">TIME A</th>
+                                    <th scope="col" width="10%" style="text-align: center">GOLS</th>
+                                    <th scope="col" width="10%" style="text-align: center">x</th>
+                                    <th scope="col" width="10%" style="text-align: center">GOLS</th>
+                                    <th scope="col" width="35%" style="text-align: center">TIME B</th>
+                                </tr>
+                                </thead>
+                                <tr>
+                                    <td style="text-align: center; vertical-align: middle">Time A</td>
+                                    <td style="text-align: center; vertical-align: middle">0</td>
+                                    <td style="text-align: center; vertical-align: middle">x</td>
+                                    <td style="text-align: center; vertical-align: middle">0</td>
+                                    <td style="text-align: center; vertical-align: middle">Time B</td>
+                                </tr>
+                            </table>
+                        </div>
                     </div>
 
                     <div class="col-sm-12" style="float: left">
