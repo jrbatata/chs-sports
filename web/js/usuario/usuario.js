@@ -41,3 +41,18 @@ function logout() {
     });
 
 }
+
+function pesquisar(){
+    var pesquisa = document.getElementById("search").value;
+    
+     ref = firebase.database().ref("campeonato");
+
+    ref.once('value').then(snapshot => {
+        snapshot.forEach(value => {
+            if(value.val().nome === pesquisa){
+                 window.location = "../jsp/campeonato.jsp?campeonato=" + value.val().campeonatoId;
+            }
+
+        });
+    });
+}

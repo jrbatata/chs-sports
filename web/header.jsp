@@ -20,8 +20,7 @@
     };
     firebase.initializeApp(config);
 </script>
-<!-- IMAGEM DO USUARIO-->
-<script src="../js/usuario/usuario.js"></script>
+
 
 <!-- Navbar -->
 <nav class="navbar navbar-light nav">
@@ -32,18 +31,19 @@
                 <a class="navbar-left" href="../jsp/home.jsp"><img src="../imagens/logo.png" width="270" height="45"></a>
             </div>
             <ul class="nav navbar-nav navbar-right">
-                <form class="navbar-form navbar-left">
-                    <form class="navbar-form" role="search">
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Pesquisar" name="q">
-                            <div class="input-group-btn">
-                                <button class="btn btn-default" type="submit"><i
-                                        class="glyphicon glyphicon-search"></i></button>
-                            </div>
+                <div class="navbar-form navbar-left">
+                                        <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Pesquisar" id="search" >
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" onclick="pesquisar()"><i
+                                    class="glyphicon glyphicon-search"></i></button>
                         </div>
-                    </form>
-                </form>
-                <li>
+                    </div>
+
+                    
+                </div>
+                
+                <li>                
                     <!-- Menu Dropdown -->
                     <div class="dropdown">
                         <button type="button" class="btn username dropdown-toggle" data-toggle="dropdown">
@@ -62,4 +62,6 @@
                 </li>
             </ul>
         </div>
+        <!-- IMAGEM DO USUARIO-->
+        <script src="../js/usuario/usuario.js"></script>
 </nav>
