@@ -1,21 +1,22 @@
+var id;
 //Busca o id do usuario logado
 firebase.auth().onAuthStateChanged((usuario) => {
     if (usuario) {
-        informacoes(usuario.uid);
+        id = usuario.uid;
     } else {
         console.log("nao tem usuario logado");
     }
-
 });
 
 var existeTime = false;
 //função para mostrar informações
-function informacoes(id) {
-    ref = firebase.database().ref("time");
-
+function informacoes() {
+    ref = firebase.database().ref("campeonato/times");
     ref.once('value').then(snapshot => {
         snapshot.forEach(value => {
-            gerarChaveamento(value.val(), id);
+            if(value.status.equals("Inscrito")){
+            chaveamento(value.val(), id);
+        }
         });
         if (!existeTime) {
             naoTem();
@@ -24,13 +25,12 @@ function informacoes(id) {
 
 }
 
-function gerarChaveamento(times, id){
+function chaveamento(times, id){
                 var rand , i;
                 var timeImpar = "0";
                 var matTimes = [];
                 var vetTimes = times.id.split(";"); //Assumindo que os times já estejam ordenados de forma que times[i + 1] seja adversário de times[i] caso o vetor contenha um número de elementos par
                 
-                if()
                 if(vetTimes.length % 2 == 1){ //Caso o número seja ímpar, um time é escolhido aleatoriamente, removido da seleção e as partidas são marcadas de forma aleatória
                     rand = Math.floor((Math.random() * vetTimes.length) + 1);
                     rand--;
@@ -68,10 +68,11 @@ function gerarChaveamento(times, id){
                 else{ //Caso seja par, as partidas são marcadas assumindo o esquema times[i] x times[i+1]
                     for(i = 0; i < vetTimes.length; i+=2){
                         var row = [vetTimes[i], vetTimes[i + 1]];
-                        /*document.write("[" + i + "] - Vetor: " + vetTimes + "<br>");
+                        document.write("[" + i + "] - Vetor: " + vetTimes + "<br>");
                         document.write("[" + i + "] - Índices escolhidos: " + 0 + " + " + rand + "<br>");
-                        document.write("[" + i + "] - Valores escolhidos: " + vetTimes[0] + " + " + vetTimes[i+1] + "<br><br>");*/
+                        document.write("[" + i + "] - Valores escolhidos: " + vetTimes[0] + " + " + vetTimes[i+1] + "<br><br>");
                         matTimes.push(row);
+                        
                     }
                 }
                 var row = [timeImpar, timeImpar]; //Time ímpar contra ele mesmo = time automaticamente classificado

@@ -82,7 +82,7 @@ function adicionaTimesATela(informacao, id) {
 
         //Cria a tabela
         var table = document.createElement("table");
-        table.setAttribute("style", "background: white; border-top :1px solid #C4C4C4; border-bottom :1px solid #C4C4C4; margin-bottom: 16px");
+        table.setAttribute("style", "background: white; border-bottom :1px solid #C4C4C4; margin-bottom: 6px");
 
         //Cria tr
         var tr = document.createElement("tr");

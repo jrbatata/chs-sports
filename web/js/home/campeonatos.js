@@ -87,6 +87,9 @@ var passaValor = function (valor, url)
 }
 
 function feed(notificacao,informacao,key) {
+    var naosegue = document.getElementById("sem-campeonato");
+    naosegue.parentNode.removeChild(naosegue);
+    
     var table = document.createElement("table");
     table.setAttribute("width", "100%");
     table.setAttribute("style", "border-bottom: 1px solid lightgrey; margin-top: 1%;");

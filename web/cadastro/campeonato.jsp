@@ -20,6 +20,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link href="../css/style.css" rel="stylesheet">
         <script src="../js/jquery.js"></script>
+        <script src="../js/campeonato/cadastro.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
         <jsp:include page="../header.jsp"/>
 
@@ -78,29 +79,29 @@
                                 <option>Campeonato</option>
                             </select>
                         </div>
-                        
+
                         <div class="form-group">
-                                <div class="col-xs-3">
-                                    <!-- Caixa de Texto da Data de Início -->
-                                    <label>Inicio do campeonato</label><label class="asterisco">*</label>
-                                    <input type="date" class="form-control" placeholder="DD/MM/AAAA" id="dataInicio">
-                                </div>
-
-                                <div class="col-xs-3">
-                                    <label>Fim do campeonato</label>
-                                    <input type="date" class="form-control" placeholder="DD/MM/AAAA" id="dataFim">
-                                </div>
-
-                                <div class="col-xs-3">
-                                    <label>Inicio das inscrições</label>
-                                    <input type="date" class="form-control" placeholder="DD/MM/AAAA" id="inicioInscricoes">
-                                </div>
-
-                                <div class="col-xs-3">
-                                    <label>Fim das inscrições</label>
-                                    <input type="date" class="form-control" placeholder="DD/MM/AAAA" id="fimInscricoes">
-                                </div>
+                            <div class="col-xs-3">
+                                <!-- Caixa de Texto da Data de Início -->
+                                <label>Inicio do campeonato</label><label class="asterisco">*</label>
+                                <input type="date" class="form-control" placeholder="DD/MM/AAAA" id="dataInicio">
                             </div>
+
+                            <div class="col-xs-3">
+                                <label>Fim do campeonato</label>
+                                <input type="date" class="form-control" placeholder="DD/MM/AAAA" id="dataFim">
+                            </div>
+
+                            <div class="col-xs-3">
+                                <label>Inicio das inscrições</label>
+                                <input type="date" class="form-control" placeholder="DD/MM/AAAA" id="inicioInscricoes">
+                            </div>
+
+                            <div class="col-xs-3">
+                                <label>Fim das inscrições</label>
+                                <input type="date" class="form-control" placeholder="DD/MM/AAAA" id="fimInscricoes">
+                            </div>
+                        </div>
 
                         <div class="col-xs-12">
                             <!-- Box de Enviar arquivo de regra -->
@@ -117,26 +118,21 @@
 
                         <div class="col-xs-6" style="margin-bottom: 2%">
                             <!-- Botões de Prosseguir -->
-                            <button class="btn btn-lg btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg" style="float: right" type="button"> </i>Prosseguir</button>
+                            <button class="btn btn-lg btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg" style="float: right" onclick="carregarDados()" type="button"> </i>Prosseguir</button>
 
                             <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                                 <div class="modal-dialog modal-lg">
                                     <div class="modal-content">
                                         <div class="modal-header">
                                             <h4 class="modal-title" id="exampleModalLabel">Selecione os times</h4>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-                                                <span aria-hidden="true">&times;</span>
-                                            </button>
                                         </div>
                                         <div class="modal-body">
                                             <table class="table table-striped table-hover">
-
                                                 <thead>
                                                     <tr>
                                                         <th>
                                                             <span class="custom-checkbox">
                                                                 <input type="checkbox" id="selectAll">
-                                                                <label for="selectAll"></label>
                                                             </span>
                                                         </th>
                                                         <th>Nome</th>
@@ -144,25 +140,13 @@
                                                         <th>Quantidade de jogadores</th>
                                                     </tr>
                                                 </thead>
-                                                <tbody>
-
-                                                    <tr>
-                                                        <td>
-                                                            <span class="custom-checkbox">
-                                                                <input type="checkbox" id="checkbox1" name="options[]" value="1">
-                                                                <label for="checkbox1"></label>
-                                                            </span>
-                                                        </td>
-                                                        <td>Thomas Hardy</td>
-                                                        <td>thomashardy@mail.com</td>
-                                                        <td>89 Chiaroscuro Rd, Portland, USA</td>
-                                                    </tr>
+                                                <tbody id="dadosCampeonatos">                                                 
                                                 </tbody>
                                             </table>
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-cancel" data-dismiss="modal">Cancelar</button>
-                                            <button type="button" class="btn btn-primary" onclick="prosseguir()">Confirmar</button>
+                                            <button type="button" class="btn btn-primary" onclick="validaTimes()">Confirmar</button>
                                         </div>
                                     </div>
                                 </div>

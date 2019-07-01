@@ -19,6 +19,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link href="../css/style.css" rel="stylesheet">
         <script src="../js/jquery.js"></script>
+        <script src="../js/campeonato/chaveamento.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     </head>
 
@@ -43,7 +44,7 @@
                                 <button class="button btn-sm" id="seguirCampeonato" style="font-variant-caps: normal; width: 100%; margin-right: 1%; float: right" onclick="seguir()">Seguir</button>
                             </td>
                             <td id="divChaveamento" class="col-sm-2" style="vertical-align: top;">
-                                <button class="button btn-sm" id="gerarChaveamento" style="font-variant-caps: normal; width: 100%; float: right">Gerar Chaveamento</button><br>
+                                <button class="button btn-sm" id="gerarChaveamento" onclick="gerarChaveamento()" style="font-variant-caps: normal; width: 100%; float: right">Gerar Chaveamento</button><br>
                             </td>
                             <td id="divAtualizaçao" class="col-sm-2" style="vertical-align: top;">
                                 <button class="button btn-sm" id="publicarAtualizacao" data-toggle="modal" data-target="#adicionarpublicacao" style="font-variant-caps: normal; width: 100%; float: right">Publicar atualização</button>
@@ -60,10 +61,7 @@
                                     </div>
                                     <div class="modal-body">
                                         <form>
-                                            <div class="form-group">
-                                                <label for="recipient-name" class="col-form-label">Título:</label>
-                                                <input type="text" class="form-control" id="recipient-name">
-                                            </div>
+
                                             <div class="form-group">
                                                 <label for="message-text" class="col-form-label">Mensagem:</label>
                                                 <textarea class="form-control" id="message-text"></textarea>
@@ -72,7 +70,7 @@
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-cancel" data-dismiss="modal">Fechar</button>
-                                        <button type="button" class="btn btn-primary">Enviar</button>
+                                        <button type="button" class="btn btn-primary" onclick ="notificacao()" data-dismiss="modal">Enviar</button>
                                     </div>
                                 </div>
                             </div>
@@ -144,39 +142,10 @@
                                 <th scope="col" width="5%" style="text-align: center">S</th>
                             </tr>
                             </thead>
-                            <tr>
-                            <tr>
-                                <td style="vertical-align: middle">1°</td>
-                                <td>
-                            <center>
-                                <img src="../imagens/team-icon.png" class="avatar img-circle " alt="avatar" width="80%">
-                            </center>
+                            <tbody id="dadosTimes">
+                                
+                            </tbody>
 
-                            </td>
-                            <td style="vertical-align: middle"><a href="time.jsp" style="color: #171a1d">Nome do time</a></td>
-                            <td style="vertical-align: middle"><a href="perfil.jsp" style="color: #171a1d">Nome do gerente</a></td>
-                            <td style="text-align: center; vertical-align: middle">0</td>
-                            <td style="text-align: center; vertical-align: middle">0</td>
-                            <td style="text-align: center; vertical-align: middle">0</td>
-                            <td style="text-align: center; vertical-align: middle">0</td>
-                            <td style="text-align: center; vertical-align: middle">0</td>
-                            </tr>
-                            <tr>
-                                <td style="vertical-align: middle">2°</td>
-                                <td>
-                            <center>
-                                <img src="../imagens/team-icon.png" class="avatar img-circle " alt="avatar" width="80%">
-                            </center>
-                            </td>
-                            <td style="vertical-align: middle"><a href="time.jsp" style="color: #171a1d">Nome do time</a></td>
-                            <td style="vertical-align: middle"><a href="perfil.jsp" style="color: #171a1d">Nome do gerente</a></td>
-                            <td style="text-align: center; vertical-align: middle">0</td>
-                            <td style="text-align: center; vertical-align: middle">0</td>
-                            <td style="text-align: center; vertical-align: middle">0</td>
-                            <td style="text-align: center; vertical-align: middle">0</td>
-                            <td style="text-align: center; vertical-align: middle">0</td>
-                            </tr>
-                            </tr>
                         </table>
                     </div>
                 </div>

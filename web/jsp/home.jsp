@@ -26,17 +26,18 @@
     <body class="body-home">
         <jsp:include page="../header.jsp"/>
 
-        <div id ="feed" class="container col-sm-8" style="background-color: white; margin-bottom: 3%; padding-bottom: 5%; margin-left: 7%; height: 100%" >
+        <div id ="feed" class="container col-sm-8" style="background-color: white; margin-bottom: 3%; padding-bottom: 5%; margin-left: 7%; height: 500px" >
             <h3><b>Feed de Atualizações</b></h3>
             <h5 class="help-block" style="margin-bottom: 1%">Nesta seção, você tem acesso a todas as notificações dos campeonatos que você segue.</h5>
                   
             
-            <!-- Nao tem campeonato
-            <center id="no-championship" style="position: relative; top: 50%; margin: 8%;">
+            <!-- Nao tem campeonato -->
+            <div id="sem-campeonato" >
+            <center style="position: relative; top: 50%; margin: 8%;">
                 <img src="../imagens/no-championship.png" width="150px" style="margin-bottom:0px"/>
                 <h1 style="font-size: 24px">Você não está seguindo nenhum campeonato</h1>
             </center>
-            -->
+            </div>
 
             
         </div>
